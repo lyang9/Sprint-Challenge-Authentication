@@ -1,0 +1,6 @@
+.joke-container {
+  border: 1px solid red;
+  display: flex;
+  flex-flow: column wrap;
+  width: 300px;
+}
