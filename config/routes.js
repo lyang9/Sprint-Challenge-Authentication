@@ -1,6 +1,11 @@
 const axios = require('axios');
+const bcrypt = require('bcryptjs');
 
+// Import middleware
 const { authenticate } = require('./middlewares');
+
+// Import knexConfig
+const db = require('../database/dbConfig');
 
 module.exports = server => {
   server.post('/api/register', register);
@@ -8,8 +13,10 @@ module.exports = server => {
   server.get('/api/jokes', authenticate, getJokes);
 };
 
+
 function register(req, res) {
   // implement user registration
+  
 }
 
 function login(req, res) {
