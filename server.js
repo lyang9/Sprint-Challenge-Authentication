@@ -18,3 +18,8 @@ configureRoutes(server);
 module.exports = {
   server,
 };
+
+// sanity check here
+server.get('/', (req, res) => {
+	res.send('It is working!');
+});
