@@ -16,8 +16,21 @@ module.exports = server => {
 
 function register(req, res) {
   // implement user registration
+  const creds = req.body;
   
-}
+  const hash = bcrypt.hashSync(creds.password, 10);
+  creds.password = hash;
+  
+  db('users')
+    .insert(creds)
+    .then(ids => {
+      const id = ids[0];
+      res.status(201).json({ newUserId: id })
+    })
+    .catch(err => {
+      res.status(500).json({ error: 'Username already exist' });
+    })
+};
 
 function login(req, res) {
   // implement user login
