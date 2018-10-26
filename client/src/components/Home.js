@@ -6,7 +6,7 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Welcome to Dad jokes!</h1>
-        <h3>Please login to view all Dad jokes</h3>
+        <h3>Please register or login to view all Dad jokes</h3>
       </div>
     );
   }
