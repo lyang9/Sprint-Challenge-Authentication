@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Jokes.css';
 
 class Jokes extends Component {
   state = {
@@ -11,7 +12,7 @@ class Jokes extends Component {
       <div className="Home">
         <h2>Dad jokes</h2>
         {this.state.jokes.map(joke => (
-          <div 
+          <div className='joke-container'
             key={joke.id}
           >
           <p>{joke.type}</p>
