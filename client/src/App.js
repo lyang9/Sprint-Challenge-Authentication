@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Jokes from './components/Jokes';
 import Login from './components/Login';
 import Logout from './components/Logout';
+import Register from './components/Register';
 
 class App extends Component {
   render() {
@@ -16,6 +17,8 @@ class App extends Component {
             &nbsp;|&nbsp;
             <NavLink to='/jokes'>Jokes</NavLink>
             &nbsp;|&nbsp;
+            <NavLink to='/register'>Register</NavLink>
+            &nbsp;|&nbsp;
             <NavLink to='/login'>Login</NavLink>
             &nbsp;|&nbsp;
             <NavLink onClick={this.handleLogout} to='/logout'>Logout</NavLink>
@@ -23,6 +26,7 @@ class App extends Component {
           <main>
             <Route exact path='/' component={Home} />
             <Route path='/jokes' component={Jokes} />
+            <Route path='/register' component={Register} />
             <Route path='/login' component={Login} />
             <Route path='/logout' component={Logout} />
           </main>
