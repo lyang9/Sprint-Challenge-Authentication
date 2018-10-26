@@ -32,6 +32,17 @@ function register(req, res) {
     })
 };
 
+function generateToken(user) {
+  const jwtPayload = {
+    ...user,
+  };
+  const jwtOptions = {
+    expiresIn: '3h',
+  };
+
+  return jwt.sign(jwtPayload, jwtSecret, jwtOptions);
+};
+
 function login(req, res) {
   // implement user login
 }
