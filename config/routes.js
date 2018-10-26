@@ -29,7 +29,7 @@ function register(req, res) {
       res.status(201).json({ newUserId: id })
     })
     .catch(err => {
-      res.status(500).json({ error: 'Username already exist' });
+      res.status(500).json({ error: 'Username already exist', err });
     })
 };
 
