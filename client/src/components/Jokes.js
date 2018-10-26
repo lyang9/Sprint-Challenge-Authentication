@@ -14,9 +14,9 @@ class Jokes extends Component {
           <div 
             key={joke.id}
           >
-          {joke.type}
-          {joke.setup}
-          {joke.punchline}
+          <p>{joke.type}</p>
+          <p>{joke.setup}</p>
+          <p>{joke.punchline}</p>
         </div>
         ))}
       </div>
