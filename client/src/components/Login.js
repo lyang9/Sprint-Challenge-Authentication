@@ -4,8 +4,8 @@ import './Login.css';
 
 class Login extends Component {
   state = {
-    username: 'json',
-    password: 'webtoken',
+    username: '',
+    password: '',
   }
 
   render() {
