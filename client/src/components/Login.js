@@ -12,6 +12,7 @@ class Login extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div>
+          <h3>Login</h3>
           <input 
             type='text'
             name='username' 
