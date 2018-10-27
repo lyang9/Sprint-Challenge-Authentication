@@ -1,6 +1,17 @@
+.Home {
+  /* border: 1px solid purple; */
+  width: 1000px;
+}
+
 .joke-container {
-  border: 1px solid red;
+  /* border: 1px solid blue; */
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.joke-card {
+  border: 1px solid red;
   width: 300px;
+  margin: 15px;
 }
