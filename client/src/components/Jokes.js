@@ -11,15 +11,19 @@ class Jokes extends Component {
     return (
       <div className="Home">
         <h2>Dad jokes</h2>
-        {this.state.jokes.map(joke => (
-          <div className='joke-container'
-            key={joke.id}
-          >
-          <p>{joke.type}</p>
-          <p>{joke.setup}</p>
-          <p>{joke.punchline}</p>
+        <div className='joke-container'>
+          {this.state.jokes.map(joke => (
+            <div className='joke-card'
+              key={joke.id}
+            >
+            <div>
+              <p>{joke.type}</p>
+              <p>{joke.setup}</p>
+              <p>{joke.punchline}</p>
+            </div>
+          </div>
+          ))}
         </div>
-        ))}
       </div>
     );
   }
