@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 import './Form.css';
 
 class Register extends Component {
   state = {
     username: '',
-    password: ''
+    password: '',
+    redirect: false
   }
 
   render() {
@@ -31,7 +33,8 @@ class Register extends Component {
           />
         </div>
         <div>
-          <button type='submit'>Signup</button>
+          {this.renderRedirect()}
+          <button onClick={this.setRedirect}>Signup</button>
         </div>
       </form>
     );
@@ -54,7 +57,19 @@ class Register extends Component {
       .catch(err => {
         console.error('ERROR', err);
       })
-  }
+  };
+
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  };
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/login' />
+    }
+  };
 }
 
 export default Register;
